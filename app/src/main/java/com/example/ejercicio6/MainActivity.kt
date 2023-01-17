@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                 binding.boton1.text= "Comenzar"
                 if(binding.edit1.text.equals("Wayne")){
                     binding.batman.isVisible=true
-
+//a
                 }else{
                     if(binding.edit1.text.equals("Joker")){
                         binding.boton1.setBackgroundColor(Color.parseColor("#0FF324"))
