@@ -34,6 +34,7 @@ fun cambiar(binding: ActivityMainBinding,resource : Resources){
         }
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            //Aqui hago que aparezca la imagen solo si esta wayne , pero si lo quitas se quita, lo mismo con el joker
             if(binding.edit1.text.contains("Wayne")){
                 binding.batman.visibility= View.VISIBLE
 //a
@@ -44,6 +45,7 @@ fun cambiar(binding: ActivityMainBinding,resource : Resources){
                 binding.batman.visibility= View.INVISIBLE
 
             }else{
+                //Aqui lo que hago es que si no se cumple ninguna de las anteriores se queda igual
                 binding.batman.visibility= View.INVISIBLE
                 binding.root.setBackgroundColor(Color.parseColor("#FFFFFF"))
                 binding.boton1.setBackgroundColor(Color.parseColor("#FF3700B3"))
@@ -57,7 +59,7 @@ fun cambiar(binding: ActivityMainBinding,resource : Resources){
 
     })
 }
-
+//Lo que hace esta funcion es que si le das al boton cuando pone comenzar no aparezca el EditTex y viceversa
 fun boton(binding: ActivityMainBinding){
     binding.boton1.setOnClickListener {
         if(binding.boton1.text=="Finalizar"){
@@ -72,7 +74,7 @@ fun boton(binding: ActivityMainBinding){
 
     }
 }
-
+//Esto es para quitar el texto cuando esta el focus en el edittext
 fun hint(binding: ActivityMainBinding){
     binding.edit1.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
         if (hasFocus) {
